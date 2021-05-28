@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.shemajamebeli4.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_nineButton"
+            app:destination="@id/nineButton" />
+        <action
+            android:id="@+id/action_mainFragment_to_TFButton"
+            app:destination="@id/TFButton" />
+    </fragment>
+    <fragment
+        android:id="@+id/nineButton"
+        android:name="com.example.shemajamebeli4.NineButton"
+        android:label="fragment_nine_button"
+        tools:layout="@layout/fragment_nine_button" >
+        <action
+            android:id="@+id/action_nineButton_to_winnerOne"
+            app:destination="@id/winnerOne" />
+        <action
+            android:id="@+id/action_nineButton_to_winnerTwo"
+            app:destination="@id/winnerTwo" />
+        <action
+            android:id="@+id/action_nineButton_to_draw"
+            app:destination="@id/draw" />
+        <action
+            android:id="@+id/action_nineButton_to_draw2"
+            app:destination="@id/draw" />
+    </fragment>
+    <fragment
+        android:id="@+id/TFButton"
+        android:name="com.example.shemajamebeli4.TFButton"
+        android:label="fragment_t_f_button"
+        tools:layout="@layout/fragment_t_f_button" >
+        <action
+            android:id="@+id/action_TFButton_to_winnerOne"
+            app:destination="@id/winnerOne" />
+        <action
+            android:id="@+id/action_TFButton_to_winnerTwo"
+            app:destination="@id/winnerTwo" />
+        <action
+            android:id="@+id/action_TFButton_to_draw"
+            app:destination="@id/draw" />
+    </fragment>
+    <fragment
+        android:id="@+id/winnerOne"
+        android:name="com.example.shemajamebeli4.WinnerOne"
+        android:label="fragment_winner_one"
+        tools:layout="@layout/fragment_winner_one" >
+        <action
+            android:id="@+id/action_winnerOne_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/winnerTwo"
+        android:name="com.example.shemajamebeli4.WinnerTwo"
+        android:label="fragment_winner_two"
+        tools:layout="@layout/fragment_winner_two" >
+        <action
+            android:id="@+id/action_winnerTwo_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/draw"
+        android:name="com.example.shemajamebeli4.Draw"
+        android:label="fragment_draw"
+        tools:layout="@layout/fragment_draw" >
+        <action
+            android:id="@+id/action_draw_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
